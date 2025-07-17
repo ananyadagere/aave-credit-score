@@ -14,7 +14,7 @@ import numpy as np
 from tqdm import tqdm
 import matplotlib.pyplot as plt
 
-# --- STEP 1: LOAD JSON DATA ---
+# STEP 1: LOAD JSON DATA 
 json_path="/content/drive/MyDrive/aave-credit-data/user-wallet-transactions.json"
 
 with open(json_path, 'r') as f:
@@ -22,7 +22,7 @@ with open(json_path, 'r') as f:
 
 print("Loaded transactions:", len(data))
 
-# --- STEP 2: FEATURE EXTRACTION ---
+# STEP 2: FEATURE EXTRACTION 
 def extract_wallet_features(transactions):
     features = defaultdict(lambda: {
         "total_actions": 0,
@@ -93,7 +93,7 @@ def extract_wallet_features(transactions):
 
     return pd.DataFrame(processed)
 
-# --- STEP 3: SCORING FUNCTION ---
+#  STEP 3: SCORING FUNCTION 
 def score_wallets(df):
     df = df.copy()
 
@@ -119,7 +119,7 @@ def score_wallets(df):
 
     return df[["wallet", "score"]]
 
-# --- STEP 4: RUN EVERYTHING ---
+# STEP 4: RUN EVERYTHING 
 df_features = extract_wallet_features(data)
 df_scores = score_wallets(df_features)
 
