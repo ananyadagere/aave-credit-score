@@ -11,7 +11,7 @@ This analysis summarizes the behavior of DeFi wallets on Aave V2 based on histor
 
 The distribution of credit scores is heavily skewed toward the lower end of the range.
 
-![Score Distribution Histogram](insert-your-image-path-here)
+![Score Distribution Histogram
 
 ### Observations:
 - A large majority of wallets scored between 0 and 100.
@@ -63,10 +63,10 @@ liquidation_penalty = num_liquidations * 5
 
 tx_gap_penalty = min(avg_tx_gap / 86400, 30)
 
-###The final score is linearly scaled to lie between 0 and 1000.
+### The final score is linearly scaled to lie between 0 and 1000.
 
-##Key Takeaways
-###Most wallets are scoring poorly due to:
+## Key Takeaways
+### Most wallets are scoring poorly due to:
 
 No repayments or poor repayment ratios.
 
@@ -74,7 +74,7 @@ Sparse or one-time usage patterns.
 
 Liquidations that heavily impact the score.
 
-###To improve the score distribution:
+### To improve the score distribution:
 
 Introduce thresholds or soft caps on penalties.
 
